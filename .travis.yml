@@ -12,10 +12,10 @@ script:
 
 
 after_success:
-  - docker build -t shubhankergoyal/multi_client ./client
-  - docker build -t shubhankergoyal/multi_nginx ./nginx
-  - docker build -t shubhankergoyal/multi_server ./server
-  - docker build -t shubhankergoyal/multi_worker ./worker
+  - docker build -t shubhankergoyal/multi-client ./client
+  - docker build -t shubhankergoyal/multi-nginx ./nginx
+  - docker build -t shubhankergoyal/multi-server ./server
+  - docker build -t shubhankergoyal/multi-worker ./worker
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
